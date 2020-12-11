@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Teacher and Advisor Help</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        div {
+            /* /* max-width: 480px;
+            text-align: center; */
+            margin: 25px; 
+        }
+        h5 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>What Do I Do?</h1>
+    <div class="containter">
+        <h3>Are you a teacher or advisor?</h3>
+        <button onclick="teacher()" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">Teacher</button> <button onclick="advisor()"type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">Advisor</button>
+    </div>
+    <div id="question2" style="display: none" class="containter">
+        <h3  id="Q2">Does my student have one or multiple assignments missing?</h3>
+        <button onclick="one()" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">One Assignment</button> <button onclick="multiple()" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">Multiple Assignments</button>
+    </div>
+    <div id="question3" style="display: none" class="containter">
+        <h3  id="Q2">Is my student missing assignments from one teacher or multiple teachers?</h3>
+        <button onclick="single()" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">One Assignment</button> <button onclick="allTeachers()" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">Multiple Assignments</button>
+    </div>
+
+    <div id="result1" style="display: none" class="containter">
+        <h3  id="Q2">Who should I contact?</h3>
+        <h5>Contact the student.</h5>    
+    </div>
+    <div id="result2" style="display: none" class="containter">
+        <h3  id="Q2">Who should I contact?</h3>
+        <h5>Contact the student and advisor.</h5>    
+    </div>
+    <div id="result3" style="display: none" class="containter">
+        <h3  id="Q2">Who should I contact?</h3>
+        <h5>Contact the student and parents. CC original teacher.</h5>    
+    </div>
+    <div id="result4" style="display: none" class="containter">
+        <h3  id="Q2">Who should I contact?</h3>
+        <h5>Contact student and parents. Conference is needed.</h5>    
+    </div>
+
+    <script>
+        function teacher(){
+            document.getElementById("question2").style.display = 'block';
+        }
+        function advisor(){
+            document.getElementById("question3").style.display = 'block';
+        }
+        function one(){
+            document.getElementById("result1").style.display = "block";
+        }
+        function multiple(){
+            document.getElementById("result2").style.display = "block";
+        }
+        function single(){
+            document.getElementById("result3").style.display = "block";
+        }
+        function allTeachers(){
+            document.getElementById("result4").style.display = "block";
+        }
+    </script>
+</body>
+</html>
